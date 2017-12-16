@@ -1,0 +1,500 @@
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:theme="@style/MyMaterialThemes"
+    android:id="@+id/view_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            app:titleEnabled="false"
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/header"
+                android:padding="5sp">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    fresco:roundAsCircle="true" />
+<!-- app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="3dp"
+                    app:placeholderImage="@drawable/profile"-->
+                <TextView
+                    android:id="@+id/fstatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/save_button_bg"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="loading.."
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                     android:textColor="@color/black"
+                    android:visibility="invisible"
+                     android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="80dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:layout_alignTop="@+id/profile_image"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentBottom="true"                    >
+
+                    <TextView
+                        android:id="@+id/fstatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         android:layout_marginTop="12dp"
+                         android:background="@drawable/editprofile_border"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5sp"
+                        android:text="Following"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+
+
+                    <LinearLayout
+                        android:id="@+id/scores"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                         android:weightSum="3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_below="@+id/fstatus1"
+                        android:layout_toEndOf="@+id/profile_image"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <RelativeLayout
+                            android:id="@+id/followerss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/countfollwers"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:text="@string/followers"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/countfollwers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:padding="5sp"
+                                android:text=""
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0.50sp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/countfollowing"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:background="@color/black"
+                            android:textSize="15sp"
+                            fresco:ignore="Suspicious0dp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/followingss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/followingst"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/countfollowing"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:text="@string/following"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/countfollowing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:padding="5sp"
+                                android:text=""
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0.50sp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/countfollowing"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:background="@color/black"
+                            android:textSize="15sp"
+                            fresco:ignore="Suspicious0dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/postss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/countpost"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:text="@string/posts"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/countpost"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:padding="5sp"
+                                android:text=""
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--AddSettingsButton-->
+
+            <!--FirstNameStatus-->
+            <RelativeLayout
+                android:id="@+id/namedis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="140dp"
+                android:layout_marginBottom="50sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/inputusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:background="@drawable/title_shadow"
+                    android:padding="5sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                       android:text=""
+                     android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!--android:background="#2d000000"-->
+
+                <TextView
+                    android:id="@+id/inputdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginStart="30dp"
+                    android:gravity="start"
+                     android:padding="5sp"
+                    android:visibility="visible"
+                    android:layout_below="@+id/inputusername"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <!--FirstNameStatus-->
+            <!--ShrinkPlace-->
+
+            <!--TopBar-->
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextAppearance="@style/Toolbar.TitleText">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/ic_arrow_back_black"
+                    android:layout_gravity="start"
+               />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2sp"
+                    android:background="#2d000000"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    android:layout_marginEnd="0dp"/>
+
+            </android.support.v7.widget.Toolbar>
+
+           <!-- <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar1"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:elevation="1dp"
+                android:visibility="invisible"
+                app:layout_collapseMode="none"
+                app:tabMode="scrollable" />-->
+            <!--TopBar-->
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5sp"
+                style="@style/Theme.Design.NoActionBar"
+                android:layout_marginTop="270dp"
+                android:layout_below="@+id/namedis"
+                android:layout_marginBottom="1sp">
+
+                <LinearLayout
+                    android:id="@+id/score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5sp">
+
+                    <RelativeLayout
+                        android:id="@+id/followers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="7dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/countfollwers1"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:text="@string/followers"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/countfollwers1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text=" "
+                            android:visibility="gone"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="27sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_follower"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0.50sp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/countfollowing"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:background="@color/black"
+                        android:textSize="15sp"
+                        fresco:ignore="Suspicious0dp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/followings"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/following"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/countfollowing1"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:text="@string/following"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/countfollowing1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text=" "
+                            android:visibility="gone"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="27sp" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_following"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0.50sp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/countfollowing"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:background="@color/black"
+                        android:textSize="15sp"
+                        fresco:ignore="Suspicious0dp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/posts"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/countpost1"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:text="@string/posts"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/countpost1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text=" "
+                            android:visibility="gone"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="27sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_post"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:paddingTop="10dp"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+     </RelativeLayout>-->
+
+    <include layout="@layout/recycler_viewprofile"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent" />
+
+</android.support.design.widget.CoordinatorLayout>

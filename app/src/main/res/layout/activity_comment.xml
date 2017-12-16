@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cog.ananv.Activity.CommentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/contentRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="550sp"
+                    android:paddingStart="10sp"
+                    android:paddingEnd="10sp">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/Relative3"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                card_view:cardElevation="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                card_view:cardCornerRadius="3dp">
+
+            <LinearLayout
+                android:id="@+id/llAddComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/comment_Profile_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10sp"
+                    fresco:roundAsCircle="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/comment_Profile_picture"
+                    android:layout_alignTop="@+id/comment_Profile_picture"
+                    android:layout_toEndOf="@+id/comment_Profile_picture">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:layout_toStartOf="@+id/send_comment"
+                        android:hint="@string/comment"
+                        android:imeOptions="actionNone"
+                        android:singleLine="true"
+                        android:layout_marginTop="10sp"
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/btnSendComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edit_cmt"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="10sp"
+                        android:src="@drawable/ic_telegram_send"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

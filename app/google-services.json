@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "647041736483",
+    "firebase_url": "https://anan-51ad9.firebaseio.com",
+    "project_id": "anan-51ad9",
+    "storage_bucket": "anan-51ad9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647041736483:android:c4b47ba14a557cdc",
+        "android_client_info": {
+          "package_name": "com.cog.ananv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647041736483-5p2d2k3h1cmhj7ohdpu0t7ldhhevl8t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKTSejw24WRoEr2qNctQRbLaizYd3MjvU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

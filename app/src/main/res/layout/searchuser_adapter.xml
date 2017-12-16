@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginStart="10sp"
+        android:id="@+id/cardview_user"
+        android:layout_marginTop="5sp"
+        fresco:cardElevation="10sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3sp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                 app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="2dp"
+                app:placeholderImage="@drawable/bgsignin"
+                fresco:roundAsCircle="true" />
+
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="2sp"
+                android:text="@string/firstname"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:layout_toStartOf="@+id/following"
+                android:layout_toEndOf="@+id/profile_image" />
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10sp"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_bg"
+                android:text="Follower"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

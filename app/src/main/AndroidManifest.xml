@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cog.ananv">
+
+    <!--COGZIDEL ANDROID -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- Google Plus permission -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- Call permission -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Send sms function -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!--ANDROID-->
+    <application
+        android:name=".Adapter.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_text_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_text_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Service.Services" />
+        <!-- Cloudinary metadata -->
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://298682355222529:Vps6HJhsFmmnaLli8Gl6uIl1VTg@ananman" />
+        <!-- android:value="cloudinary://864337578354595:b3sQaZOI1AxVUbX4wYqSjniBTP8@cogzidel-tech" /> -->
+
+        <activity
+            android:name=".Activity.LaunchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="c318f7efab8b3f74809783c46a9104fff0439e83" />
+
+        <activity
+            android:name=".Activity.DetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activity.EmojiActivity" />
+        <activity android:name=".CustomizeGallary.MediaThumbMainActivity" />
+        <activity android:name=".CustomizeGallary.FullScreenImageActivity" />
+        <activity android:name=".CustomizeGallary.VideoPlayActivity" />
+        <activity android:name=".VideoTrimmer.TrimmerActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".ImageFilter.ImageFilter" />
+        <activity android:name=".Activity.CommentActivity" />
+        <activity android:name=".Activity.Search" />
+        <activity android:name=".Comment.Comment_Page" />
+        <activity android:name=".Activity.ViewprofiledetailActivity" />
+        <activity android:name=".Activity.ViewUserProfile" />
+        <activity android:name=".Activity.CropimageActivity" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name=".Activity.SignupActivity"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

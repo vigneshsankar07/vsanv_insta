@@ -1,0 +1,412 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/edit_profile"
+    tools:context="com.cog.ananv.Fragment.EditprofileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20sp"
+            android:paddingTop="20sp">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:elevation="50dp">
+
+                <ImageView
+                    android:id="@+id/postdetail_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_arrow_back_black" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:padding="5sp"
+                    android:text="Your Post"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/profileimage"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="56dp"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="3dp"
+                    app:placeholderImage="@drawable/profile"
+                    fresco:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/fstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/save_button"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="Following"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="80dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/score"
+                style="@style/Theme.Design.NoActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namedis"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:paddingBottom="5sp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/followers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/countfollwers"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/followers"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/countfollwers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text=" "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="27sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/followings"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1.5sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2sp"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/following"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/countfollowing"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/following"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/countfollowing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text=" "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="27sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/posts"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1.5sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2sp"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/countpost"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/posts"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/countpost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text=" "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="27sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:focusable="false"
+                android:hint="@string/firstname"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:visibility="gone"
+                android:focusable="false"
+                android:hint="@string/last_name"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:focusable="false"
+                android:hint="@string/user_name"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:focusable="false"
+                android:hint="@string/descriptions"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/useremail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:focusable="false"
+                android:visibility="gone"
+                android:hint="@string/email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+
+            <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                android:id="@+id/hidepassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:focusable="true"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textAlignment="inherit"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/userpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:drawableRight="@drawable/edit_pencil"
+                android:hint="@string/password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:met_baseColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_primaryColor="?colorAccent"
+                app:met_textColorHint="@color/black"
+                app:met_underlineColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+
+                <Button
+                    android:id="@+id/support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="40sp"
+                    android:layout_marginStart="40sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/bgsignup"
+                    android:text="@string/support"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_light_background"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/support"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginEnd="40sp"
+                    android:layout_marginStart="40sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/button_bg"
+                    android:text="@string/log_out"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_light_background"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

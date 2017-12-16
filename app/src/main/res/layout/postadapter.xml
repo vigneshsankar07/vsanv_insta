@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        app:cardElevation="10sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/list_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="300sp" />
+
+                    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                        android:id="@+id/video_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="300sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/deletedpost"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/post_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:text="Title"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:text="Category"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/deletedpost"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/delete_post"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0sp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/likecount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:padding="5sp"
+                            android:text="0" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_alignBottom="@+id/likecount"
+                            android:layout_alignTop="@+id/likecount"
+                            android:layout_margin="0sp"
+                            android:layout_toEndOf="@+id/likecount"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_like_color" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/counts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:padding="5sp"
+                            android:text="0"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/counts"
+                            android:layout_alignTop="@+id/counts"
+                            android:layout_margin="0sp"
+                            android:layout_toEndOf="@+id/counts"
+                            android:padding="3sp"
+                            android:src="@drawable/comment_check" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        app:cardElevation="10sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/list_image1"
+                        android:layout_width="80sp"
+                        android:layout_height="80sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="2"
+                        android:layout_alignTop="@+id/list_image1"
+                        android:layout_alignBottom="@+id/list_image1"
+                        android:layout_toEndOf="@+id/list_image1"
+                        android:layout_toStartOf="@+id/list_image2">
+
+                        <TextView
+                            android:id="@+id/post_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:text="Title"
+                             android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:text="Category"
+                             android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/list_image2"
+                        android:layout_alignParentEnd="true"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:padding="2sp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/commenttt"
+                             android:src="@drawable/ic_timer" />
+
+                        <TextView
+                            android:id="@+id/commenttwxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_toEndOf="@+id/commenttt"
+                            android:padding="5sp"
+                            android:text="5min ago"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/list_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp" />
+
+                    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                        android:id="@+id/video_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="10dp"
+                         android:orientation="horizontal"
+                        android:id="@+id/relativeLayout2">
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                             android:layout_gravity="center"
+                            android:id="@+id/like_comment"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:padding="10sp"
+                                android:background="@drawable/circle_like"
+                                android:src="@drawable/ic_like_color"
+                                android:id="@+id/imageView3"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="6dp" />
+
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignBottom="@+id/imageView3"
+                                android:padding="10sp"
+                                android:id="@+id/comment"
+                                android:background="@drawable/circle_like"
+                                android:src="@drawable/ic_comment"
+                                android:layout_alignTop="@+id/imageView3"
+                                android:layout_toEndOf="@+id/imageView3"
+                                />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/deletedpost"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="10dp"
+                            android:padding="0dp"
+                            android:background="@drawable/circle_like"
+                            android:src="@drawable/delete_post"
+                            android:visibility="visible" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_toEndOf="@+id/like_comment"
+                            android:layout_alignBottom="@+id/like_comment"
+                            android:layout_alignTop="@+id/deletedpost">
+
+                            <TextView
+                                android:id="@+id/likecount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15sp"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginBottom="5sp"
+                                android:padding="5sp"
+                                android:text="0"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/liketxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0sp"
+                                android:layout_marginTop="5sp"
+                                android:padding="5sp"
+                                android:text="likes"
+                                android:layout_toEndOf="@+id/likecount"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/cmtcount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5sp"
+                                android:layout_marginStart="15sp"
+                                android:layout_marginTop="5sp"
+                                android:padding="5sp"
+                                android:layout_toEndOf="@+id/liketxt"
+                                android:text="0"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/commenttxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0sp"
+                                android:layout_marginTop="5sp"
+                                android:layout_toEndOf="@+id/cmtcount"
+                                android:padding="5sp"
+                                android:text="Comments"
+                                android:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+-->

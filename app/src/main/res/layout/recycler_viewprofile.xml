@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cog.ananv.Fragment.ViewprofileFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profilerecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="@dimen/activity_vertical_margin" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/followerrecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        android:padding="@dimen/activity_vertical_margin" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/followingrecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        android:padding="@dimen/activity_vertical_margin" />
+
+    <TextView
+        android:id="@+id/list_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No List"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:visibility="gone" />
+</RelativeLayout>

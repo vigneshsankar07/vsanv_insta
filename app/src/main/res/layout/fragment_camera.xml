@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cog.ananv.Fragment.CameraFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                         android:visibility="visible">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:id="@+id/Categoryspinner"/>
+
+                        <!--<Spinner-->
+
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentLeft="true"-->
+                            <!--android:layout_marginStart="20dp"-->
+                            <!--android:popupBackground="@android:color/transparent"-->
+                            <!--android:scrollbarStyle="insideInset"-->
+                            <!--android:spinnerMode="dropdown"-->
+                            <!--android:textSize="16sp"-->
+                            <!--android:visibility="gone"-->
+                            <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+                            <!--tools:ignore="MissingPrefix" />-->
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/Post_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="10sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="10sp"
+                            app:actualImageScaleType="fitCenter"
+                            app:placeholderImage="@drawable/cameration" />
+
+                        <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                            android:id="@+id/video_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/editComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20sp"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:hint="Write a Caption Here"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:met_baseColor="@color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/White"
+                        app:met_maxCharacters="200"
+                        app:met_textColorHint="@color/litegray"
+                        app:met_underlineColor="@color/litegray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="30sp"
+                        android:layout_marginTop="10sp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <Button
+                                android:id="@+id/camera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15sp"
+                                android:layout_marginStart="15sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/camera_bg"
+                                android:gravity="center"
+                                android:text="@string/camera_tab"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                android:id="@+id/video"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15sp"
+                                android:layout_marginStart="15sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/camera_bg"
+                                android:gravity="center"
+                                android:text="Video"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/Post"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="25sp"
+                            android:layout_marginStart="25sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/camera_bg"
+                            android:gravity="center"
+                            android:text="POst"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

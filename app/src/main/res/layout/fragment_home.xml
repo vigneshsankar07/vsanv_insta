@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homepage"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg4_home"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Home_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_vertical_margin"
+        android:visibility="visible"
+        android:clipToPadding="false"/>
+
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">-->
+
+        <com.allattentionhere.autoplayvideos.AAH_CustomRecyclerView
+            android:id="@+id/rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No List"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:id="@+id/list_empty"
+                android:layout_gravity="center"/>
+
+<!--
+        </android.support.v4.widget.SwipeRefreshLayout>
+-->
+
+
+
+    </RelativeLayout>
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/aviloading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        app:indicatorName="BallClipRotateIndicator"
+        app:indicatorColor="@color/colorAccent" />
+<!--BallPulseIndicator-->
+</FrameLayout>

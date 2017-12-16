@@ -1,0 +1,72 @@
+<RelativeLayout android:id="@+id/r"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thumb_background_color">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/headrer"
+        android:background="@color/placeholder_background"
+        android:layout_above="@+id/Imagefilter"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/place_holder_imageview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/headrer"
+        android:elevation="20sp"
+        android:background="@color/White"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/back"
+            android:background="@null"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="5sp"
+            android:padding="10sp"
+            android:src="@drawable/ic_left"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/Next"
+            android:text="Next"
+            android:padding="10sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_right"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:layout_below="@+id/Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recycler_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/Imagefilter"
+        android:background="@color/thumb_background_color">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/thumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/thumbnail_vertical_padding"
+            android:layout_marginTop="@dimen/thumbnail_vertical_padding"
+            android:clipToPadding="false"/>
+    </RelativeLayout>
+
+</RelativeLayout>

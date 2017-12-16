@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="litegray">#D6D6D6</color>
+    <color name="litewhite">#E5E5E5</color>
+    <color name="colorPrimary">#EFE8EA</color>
+    <color name="colorPrimaryDark">#624466</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray">#767676</color>
+
+    <color name="bb_inActiveBottomBarItemColor">#747474</color>
+
+    <color name="White">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="darkpink">#E9088A</color>
+    <color name="thumb_background_color">#000000</color>
+    <color name="placeholder_background">#fff</color>
+
+    <color name="lightGrey">#3c929292</color>
+    <color name="detailColor1">#609C9C9C</color>
+
+</resources>

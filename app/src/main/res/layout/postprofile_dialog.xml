@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#ededed"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/header">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/postdetail_close"
+                    android:src="@drawable/ic_arrow_back_black"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/header"
+            android:id="@+id/relativeLayout">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/Profile_picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10sp"
+                 android:layout_alignParentStart="true"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:padding="0sp"
+                android:text="Ane mark steve jon"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:visibility="visible"
+                android:id="@+id/postname"
+                android:layout_below="@+id/Profile_picture"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:padding="0sp"
+                android:text="Ane mark steve jon"
+                android:gravity="center"
+                android:id="@+id/postdesc"
+                android:textAlignment="center"
+                android:visibility="visible"
+                android:layout_below="@+id/postname"
+                android:textColor="@android:color/black" />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                 android:layout_alignTop="@+id/Profile_picture"
+                android:layout_alignBottom="@+id/Profile_picture"
+                android:layout_toEndOf="@+id/Profile_picture">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="0sp"
+                     android:background="@drawable/button_bg"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp"
+                    android:text="Follow"
+                    android:id="@+id/follow"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    android:textColor="@android:color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/follow_lau">
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relativeLayout">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

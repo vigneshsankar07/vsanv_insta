@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="250dp"
+    android:layout_height="100dp"
+    android:focusableInTouchMode="true"
+    android:layout_marginStart="10sp"
+    android:focusable="true"
+    android:clickable="true">
+
+    <!-- content -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="250sp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_chip_view_opened"
+        android:orientation="horizontal">
+
+        <!-- avatar icon -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+           android:layout_gravity="center"
+            android:padding="5sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/avatar"/>
+
+        <!-- info -->
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <!-- name -->
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="center"
+                android:scrollHorizontally="true"
+                android:text="Contact name sdfdsfdsfdgs"
+                android:textSize="16sp" />
+
+            <!-- info -->
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:text="paul@gmail.comdfdgdgsdggdgdgdgdsgdgdgdg"/>
+
+
+        </LinearLayout>
+
+        <!-- delete button -->
+        <ImageButton
+            android:id="@+id/delete_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_cancel_white_24dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

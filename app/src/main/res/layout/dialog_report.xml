@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgreport"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/header">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/imageView2" />
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_report"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/appicon"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Report the Post"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:id="@+id/needphnnotxttitle"
+                    android:layout_below="@+id/appicon"
+                    android:textSize="18sp"
+                    />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/close"
+                    android:src="@drawable/ic_black_circle" />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/blackline"
+                >
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/blackline"
+                android:padding="0dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_cmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:hint="@string/report"
+                    android:layout_below="@+id/Name"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_primaryColor="?colorAccent"
+                    app:met_textColorHint="#000"
+                    app:met_underlineColor="@color/colorPrimary"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:layout_toStartOf="@+id/send_report" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:layout_alignTop="@+id/edit_cmt"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/send_report"
+                    android:src="@drawable/ic_telegram_send"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

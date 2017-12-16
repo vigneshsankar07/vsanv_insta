@@ -1,0 +1,166 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signup_layout"
+    tools:context="com.cog.ananv.Fragment.SigninFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsignin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/applogo" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginTop="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:orientation="vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/useremail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/White"
+                        app:met_baseColor="@color/White"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/White"
+                        app:met_primaryColor="?colorAccent"
+                        app:met_textColorHint="@color/White"
+                        app:met_underlineColor="@color/colorPrimary" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/userpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:maxLines="1"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/White"
+                        app:met_baseColor="@color/White"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/White"
+                        app:met_primaryColor="?colorAccent"
+                        app:met_textColorHint="@color/White"
+                        app:met_underlineColor="@color/colorPrimary" />
+
+                    <CheckBox
+                        android:id="@+id/saveLoginCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="@string/remember_me"
+                        android:textColor="@color/White"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:button="@drawable/checkbox_custom"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/login"
+                android:textColor="@color/White"
+               />
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_below="@+id/login"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bgsignup"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textColor="@color/White" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forgetpassword"
+                android:text="@string/forgot_password"
+                android:textSize="16dp"
+                android:layout_marginBottom="10sp"
+                android:textColor="@color/White"
+                android:layout_below="@+id/signup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:elevation="10dp"
+            android:padding="2dp"
+            android:src="@drawable/backicon"
+            android:visibility="invisible" />
+
+    </android.support.v7.widget.Toolbar>
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent" />
+</FrameLayout>

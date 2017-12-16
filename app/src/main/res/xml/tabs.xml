@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/home_tab"
+        icon="@drawable/ic_home_black_24dp"
+       />
+    <tab
+        id="@+id/search_tab"
+        icon="@drawable/ic_search_black_24dp"
+         />
+    <tab
+        id="@+id/camera_tab"
+        icon="@drawable/ic_camera_alt_black_24dp"
+       />
+ 
+    <tab
+        id="@+id/profile_tab"
+        icon="@drawable/ic_profile_image"
+         />
+    <tab
+        id="@+id/notification_tab"
+        icon="@drawable/ic_notification"
+         />
+
+
+</tabs>
+
+<!--    icon="@drawable/host_calender"-->

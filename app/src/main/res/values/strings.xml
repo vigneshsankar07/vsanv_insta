@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Anan</string>
+
+    <string name="firstname">First Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="app_font">CircularAirBook.otf</string>
+
+    <string name="botom_logo"><![CDATA[Discover, Learn & Share what you love]]></string>
+
+    <string name="signup">Sign Up</string>
+    <string name="login">Log In</string>
+    <string name="camera_tab">Photos</string>
+
+    <string name="trimming_progress">Trimming your video...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="remember_me">Remember Me</string>
+
+    <string name="descriptions">Description</string>
+
+    <string name="termsandconditions">Terms of Use and Private Policy</string>
+    <string name="save">Save</string>
+    <string name="support">Support</string>
+    <string name="log_out">Log out</string>
+    <string name="user_name">User Name</string>
+    <string name="message">Message</string>
+    <string name="alert">Alert</string>
+    <string name="content">Message Sent Successfully!</string>
+    <string name="submit">SEND</string>
+    <string name="ok">Ok</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="posts">Posts</string>
+
+    <string name="reset_your_password">Enter your Email address and we will send you a link to reset your password</string>
+    <string name="reset_password">Reset Password</string>
+
+    <string name="last_name">Last Name</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="favourite_cat">Search Username</string>
+    <string name="internet">Check your internet connection</string>
+
+    <string name="comment">Comment</string>
+    <string name="report">Write your report comments?</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="add_profile_photo">Add Profile Photo</string>
+    <string name="subtext">Add a profile photo so your friends know it\'s you.</string>
+    <string name="add_photo">Add photo</string>
+
+    <string name="video_saved_at">Video saves at : $%1s</string>
+    <string name="label_select_video">Select Video</string>
+    <string name="next">next</string>
+    <string name="pick">Pick</string>
+    <string name="title_activity_signup">SignupActivity</string>
+
+
+</resources>
